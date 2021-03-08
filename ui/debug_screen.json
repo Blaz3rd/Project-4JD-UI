@@ -1,5 +1,20 @@
 {
-  "debug_screen@common.base_screen": {
-    "$screen_content": "debug_screen_deluxe.content_panel"
+  "gamma_image": {
+    "type": "image",
+    "texture": "textures/ui/transparent_white",
+    "size": [ 10000, 10000 ],
+    "layer": 150
+  },
+
+  "content_panel": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_front",
+        "value": {
+          "gamma_image@debug_screen.gamma_image": {}
+        }
+      }
+    ]
   }
 }
