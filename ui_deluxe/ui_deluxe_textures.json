@@ -1,0 +1,153 @@
+{
+  "namespace": "ui_deluxe_textures",
+  
+  /////////////////////////////////////////////////////////////////////////////
+  //  Recipe Book.
+  /////////////////////////////////////////////////////////////////////////////
+
+  // Dialog Background
+  "recipe_book_tab_items": {
+    "type": "image",
+    "texture": "textures/ui_deluxe/recipe_book_panel",
+    "size": [ 146, 166 ]
+  },
+
+  "recipe_book_tab_items_touch": {
+    "type": "image",
+    "texture": "textures/ui_deluxe/recipe_book_panel_touch",
+    "size": [ 130, 166 ]
+  },
+
+  //  Tab Base
+  "recipe_book_tab_image": {
+    "type": "image",
+    "size": [ 35, 26 ]
+  },
+
+  "recipe_book_tab_front@ui_deluxe_textures.recipe_book_tab_image": {
+    "texture": "textures/ui_deluxe/recipe_book_tab_front"
+  },
+
+  "recipe_book_tab_back@ui_deluxe_textures.recipe_book_tab_image": {
+    "texture": "textures/ui_deluxe/recipe_book_tab_back"
+  },
+
+  // Filter Toggle
+  "recipe_filter_toggle": {
+    "type": "image",
+    "size": [ 27, 16 ]
+  },
+
+  "craft_toggle_off@ui_deluxe_textures.recipe_filter_toggle": {
+    "texture": "textures/ui_deluxe/craft_toggle_off"
+  },
+
+  "craft_toggle_off_hover@ui_deluxe_textures.recipe_filter_toggle": {
+    "texture": "textures/ui_deluxe/craft_toggle_off_hover"
+  },
+
+  "craft_toggle_on@ui_deluxe_textures.recipe_filter_toggle": {
+    "texture": "textures/ui_deluxe/craft_toggle_on"
+  },
+
+  "craft_toggle_on_hover@ui_deluxe_textures.recipe_filter_toggle": {
+    "texture": "textures/ui_deluxe/craft_toggle_on_hover"
+  },
+  
+  // Grid Buttons
+  "recipe_book_grid_button": {
+    "type": "image",
+    "size": [ 27, 27 ]
+  },
+
+  "cell_image_recipe_default@ui_deluxe_textures.recipe_book_grid_button": {
+    "texture": "textures/ui_deluxe/cell_image_recipe_default"
+  },
+
+  "cell_image_recipe_creative@ui_deluxe_textures.recipe_book_grid_button": {
+    "texture": "textures/ui_deluxe/cell_image_recipe_creative"
+  },
+
+  "cell_image_recipe_group_head_collapsed@ui_deluxe_textures.recipe_book_grid_button": {
+    "texture": "textures/ui_deluxe/cell_image_recipe_group_head_collapsed"
+  },
+
+  "cell_image_recipe_group_head_expanded@ui_deluxe_textures.recipe_book_grid_button": {
+    "texture": "textures/ui_deluxe/cell_image_recipe_group_head_expanded"
+  },
+
+  "cell_image_recipe_group_item@ui_deluxe_textures.recipe_book_grid_button": {
+    "texture": "textures/ui_deluxe/cell_image_recipe_group_item"
+  },
+
+  "cell_image_recipe_selected@ui_deluxe_textures.recipe_book_grid_button": {
+    "texture": "textures/ui_deluxe/cell_image_recipe_selected"
+  },
+
+  "cell_image_recipe_default_red@ui_deluxe_textures.recipe_book_grid_button": {
+    "texture": "textures/ui_deluxe/cell_image_recipe_default_red"
+  },
+
+  // Search box
+
+  // Survival
+  "survival_recipe_book_search_box": {
+    "type": "image",
+    "texture": "textures/ui_deluxe/recipe_book_search_box_survival",
+    "size": [ 98, 16 ]
+  },
+
+  "survival_recipe_book_search_box_hover@ui_deluxe_textures.survival_recipe_book_search_box": {
+    "texture": "textures/ui_deluxe/recipe_book_search_box_survival_hover"
+  },
+
+  // Survival Touch
+  "survival_recipe_book_search_box_touch": {
+    "type": "image",
+    "texture": "textures/ui_deluxe/recipe_book_search_box_survival_touch",
+    "size": [ 82, 16 ]
+  },
+
+  "survival_recipe_book_search_box_hover_touch@ui_deluxe_textures.survival_recipe_book_search_box_touch": {
+    "texture": "textures/ui_deluxe/recipe_book_search_box_survival_touch_hover"
+  },
+
+  // Creative
+  "creative_recipe_book_search_box": {
+    "type": "image",
+    "texture": "textures/ui_deluxe/recipe_book_search_box_creative",
+    "size": [ 110, 16 ]
+  },
+
+  "creative_recipe_book_search_box_hover@ui_deluxe_textures.creative_recipe_book_search_box": {
+    "texture": "textures/ui_deluxe/recipe_book_search_box_creative_hover"
+  },
+
+  /////////////////////////////////////////////////////////////////////////////
+  //  Creative.
+  /////////////////////////////////////////////////////////////////////////////
+
+  //  Tab Base
+  "creative_tab_image": {
+    "type": "image",
+    "size": [ 28, 32 ]
+  },
+
+  //  Left
+  "creative_tab_front_left@ui_deluxe_textures.creative_tab_image": {
+    "texture": "textures/ui_deluxe/creative_tab_front_left"
+  },
+
+  "creative_tab_back_left@ui_deluxe_textures.creative_tab_image": {
+    "texture": "textures/ui_deluxe/creative_tab_back_left"
+  },
+
+  //  Middle
+  "creative_tab_front_middle@ui_deluxe_textures.creative_tab_image": {
+    "texture": "textures/ui_deluxe/creative_tab_front_middle"
+  },
+
+  "creative_tab_back_middle@ui_deluxe_textures.creative_tab_image": {
+    "texture": "textures/ui_deluxe/creative_tab_back_middle"
+  }
+}

@@ -1,0 +1,62 @@
+//File made by @CrizArtEX.
+//(c) Don't use any code design without permission!
+{
+  "namespace": "redstone_deluxe",
+
+  /////////////////////////////////////////////////////////////////////////////
+  //  Screens.
+  /////////////////////////////////////////////////////////////////////////////
+
+  "redstone_input_grid@redstone.redstone_input_grid": {
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "grid_item_template": "common_deluxe.container_item"
+  },
+
+  "redstone_panel_top_half@redstone.redstone_panel_top_half": {
+    "offset": [ 0, 0 ],
+    "controls": [
+      { "redstone_input_grid@redstone_deluxe.redstone_input_grid": { } }
+    ]
+  },
+
+  "panel": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@common_deluxe.container_gamepad_helpers": {} },
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 8
+        }
+      },
+      {
+        "root_panel@common.root_panel": {
+          "layer": 1,
+          "size": "$screen_dimensions",
+          "controls": [
+            { "common_panel@common_deluxe.common_panel_container": { } },
+            {
+              "redstone_screen_inventory": {
+                "type": "panel",
+                "layer": 5,
+                "controls": [
+                  { "red_panel@redstone_deluxe.redstone_panel_top_half": { } },
+                  { "inventory_panel_bottom_half@common_deluxe.inventory_panel_bottom_half": { "offset": [ 0, 2 ] } },
+                  { "hotbar_grid@common_deluxe.hotbar_grid_template": { "offset": [ 13, -8 ] } },
+                  { "red_hold_icon@common.inventory_take_progress_icon_button": { } }
+                ]
+              }
+            },
+            { "red_icon@common_deluxe.inventory_selected_icon_button": { } },
+            { "gamepad_cursor@common.gamepad_cursor_button": {} },
+            { "$screen_label@$screen_label": {
+              "offset": "$label_offset",
+              "anchor_from": "$anchor_from",
+              "anchor_to": "$anchor_to"
+            } }
+          ]
+        }
+      }
+    ]
+  }
+}

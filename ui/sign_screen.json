@@ -1,0 +1,12 @@
+//File modified by @CrizArtEX.
+//(c) Don't use any code design without permission!
+{
+  //---------------------------------------------------------------------------
+  // Modified assets for Sign Screen!
+  //---------------------------------------------------------------------------
+
+  "sign_screen@common.base_screen": {
+    "$screen_bg_content": "common.screen_background", //Added/Modified
+    "$screen_content": "sign_deluxe.sign_screen_content"
+  }
+}

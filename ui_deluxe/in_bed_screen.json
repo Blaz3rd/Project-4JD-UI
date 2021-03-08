@@ -1,0 +1,70 @@
+//File made by @CrizArtEX.
+//(c) Don't use any code design without permission!
+{
+  "namespace": "bed_deluxe",
+
+  "in_bed_screen_content": {
+    "type": "panel",
+    "controls": [
+      {
+        "wake_up_button_panel": {
+          "type": "stack_panel",
+          "orientation": "vertical",
+          "size": [ 200, 45 ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 0, -20 ],
+          "controls": [
+            {
+              "wake_up_button@common_deluxe.classic_main_button": {
+                "layer": 1,
+                "$button_text": "multiplayer.stopSleeping",
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.menu_select",
+                    "to_button_id": "button.wake_up_button",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_ok",
+                    "to_button_id": "button.wake_up_button",
+                    "mapping_type": "pressed"
+                  }
+                ]
+              }
+            },
+            {
+              "spacer": {
+                "type": "panel",
+                "size": [ 0, 5 ]
+              }
+            },
+            {
+              "chat_button@common_deluxe.classic_main_button": {
+                "layer": 1,
+                "$button_text": "multiplayer.inBedOpenChat",
+                "button_mappings": [
+                  {
+                    "from_button_id": "button.menu_select",
+                    "to_button_id": "button.chat",
+                    "mapping_type": "pressed"
+                  },
+                  {
+                    "from_button_id": "button.menu_ok",
+                    "to_button_id": "button.chat",
+                    "mapping_type": "pressed"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "select_button@death_deluxe.a_button_panel": {
+          "layer": 1
+        }
+      }
+    ]
+  }
+}

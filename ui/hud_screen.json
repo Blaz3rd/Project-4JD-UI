@@ -1,0 +1,7 @@
+//File modified by @CrizArtEX.
+//(c) Don't use any code design without permission!
+{
+  "hud_screen@common.base_screen": {
+    "$screen_content": "hud_deluxe.hud_content"
+  }
+}

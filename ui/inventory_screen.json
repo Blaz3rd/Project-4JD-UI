@@ -1,0 +1,17 @@
+//File modified by @CrizArtEX.
+//(c) Don't use any code design without permission!
+{
+  "crafting_screen@crafting.inventory_screen_base": {
+    "$is_crafting": true,
+    "$craft_grid_variant": "crafting_deluxe.work_bench_panel_3x3",
+    "$screen_content": "crafting_deluxe.recipe_crafting_screen_content",
+    "$screen_bg_content": "common_deluxe.null_panel"
+  },
+
+  "inventory_screen@crafting.inventory_screen_base": {
+    "$is_inventory": true,
+    "$craft_grid_variant": "crafting_deluxe.crafting_panel_2x2",
+    "$screen_content": "crafting_deluxe.recipe_inventory_screen_content",
+    "$screen_bg_content": "common_deluxe.null_panel"
+  }
+}

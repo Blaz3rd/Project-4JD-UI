@@ -1,0 +1,30 @@
+//File made by @CrizArtEX.
+//(c) Don't use any code design without permission!
+{
+  "namespace": "debug_screen_deluxe",
+
+  "special_render_text": {
+    "type": "label",
+    "visible": "$show_custom_debug_label",
+    "text_alignment": "center",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "text": "Vanilla Deluxe: Project JD UI v0.0.1\nUI ported By @CrizArtEX",
+    "shadow": true,
+    "size": [ "100%", "100%" ]
+  },
+
+  "content_panel": {
+    "type": "panel",
+    "clips_children": false,
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "special_render@debug_screen_deluxe.special_render_text": {
+          "ignored": "(not $pre_release)",
+        }
+      }
+      //{ "panorama_bg@common_console.panorama_bg": { } }
+    ]
+  },
+}

@@ -1,0 +1,53 @@
+{
+  //////// Vanilla Deluxe: Basic UI Tweaks ////////
+
+  //(c) CrizArtEX. Don't use any code without authorization!
+
+  //HUD
+  "$experience_outline_text_color": [ 0.0, 0.0, 0.0 ],
+
+  //Main menu button
+  "$main_menu_button_default_color": [ 0.87, 0.87, 0.87 ],
+  "$main_menu_button_hover_color": [ 1.0, 1.0, 0.62 ],
+  "$main_menu_button_preesed_color": [ 1.0, 1.0, 0.62 ],
+  "$main_menu_button_locked_color": [ 0.62, 0.62, 0.62 ],
+
+  //Death Screen
+  "$death_outline_text_color": [ 0, 0, 0 ],
+
+  //Progress Screen
+  "$loading_outline_text_color": [ 0, 0, 0 ],
+
+  //Anvil (For java text shadow colors)
+  "$anvil_cost_fail_text_shadow": [ 0.25, 0.09, 0.09 ],
+  "$anvil_cost_success_text_shadow": [ 0.12, 0.25, 0.035 ],
+
+  //Enchanting Table (For java text colors, default, hover and locked)
+  "$enchanting_runes_default_color": [ 0.4, 0.36, 0.3 ],
+  "$enchanting_runes_hover_color": [ 1.0, 1.0, 0.5 ],
+  "$enchanting_runes_locked_color": [ 0.2, 0.18, 0.14 ],
+
+  "$enchanting_cost_locked_color": [ 0.25, 0.5, 0.06 ],
+
+  //Sign
+  "$sign_edit_text_color": [ 1, 1, 1 ],
+
+  //Misc
+  //"$old_pocket_ui_textures": true, //Not yet!!
+  "$title_texture": "textures/ui/title",
+  "$edition_logo_texture": "textures/ui_deluxe/edition",
+  "$edition_logo_visible": false,
+
+  "$options_bg_tiled_scale": [ 2, 2 ],
+  "$portal_bg_tiled_scale": [ 2, 2 ],
+
+  "$show_custom_debug_label": true,
+
+  //More Java UI
+  "$alt_hud_ui": false,
+  "$alt_inventory_grid_ui": false,
+  "$alt_recipe_book_and_creative_ui": false,
+
+  "$alt_chat_ui": false, //Enable if you wanna use gamepad or use PC.
+  "$chat_size": [ 326, 180 ]
+}

@@ -1,0 +1,85 @@
+//File made by @CrizAtEX. Don´t steal the code design without permission ;)
+{
+  "namespace": "common_art_deluxe",
+
+  "title_image": {
+    "type": "image",
+    "size": [ 285.5, 69 ],
+    "layer": 1,
+    "texture": "$title_texture"
+  },
+
+  "title_image_edu": {
+    "type": "image",
+    "size": [ 285.5, 69 ],
+    "layer": 1,
+    "texture": "textures/ui/title_edu"
+  },
+
+  "edition_logo_image": {
+    "type": "image",
+    "layer": 1,
+    "texture": "$edition_logo_texture"
+  },
+
+  "title_panel": {
+    "type": "panel",
+    "size": [ 285.5, 69 ],
+    "offset": [ 0, "1.5%" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "title_image@common_art_deluxe.title_image": {} },
+      {
+        "splash_text@common_art.splash_text": {
+          "offset": [ -8, 10 ]
+        }
+      },
+      {
+        "edition_logo_image@common_art_deluxe.edition_logo_image": {
+          "offset": [ 0, 9 ],
+          "visible": "$edition_logo_visible",
+          "size": [ "50%", "32%" ],
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle"
+        }
+      }
+    ]
+  },
+
+  "title_panel_edu": {
+    "type": "panel",
+    "$ignore_splash_text|default": false,
+    "size": [ 285.5, 69.5 ],
+    "offset": [ 0, "3%" ],
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "controls": [
+      { "title_image@common_art_deluxe.title_image": {} },
+      {
+        "splash_text@common_art.splash_text": {
+          "offset": [ -8, 10 ]
+        }
+      }
+    ]
+  },
+
+  "title_panel_content": {
+    "type": "panel",
+    "variables": [
+      {
+        "requires": "$education_edition",
+        "$title_panel": "common_art_deluxe.title_panel_edu"
+      },
+      {
+        "requires": "(not $education_edition)",
+        "$title_panel": "common_art_deluxe.title_panel"
+      }
+    ],
+    "controls": [
+      {
+        "$title_panel@$title_panel": { }
+      }
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+//File modified by @CrizArtEX.
+//(c) Don't use any code design without permission!
+{
+  "realms_loading_progress_screen@progress.progress_screen": {
+    "variables": [
+      {
+        "requires": "($desktop_screen)",
+        "$screen_bg_content": "common_delxe.null_panel",
+        "$screen_content": "progress_deluxe.world_dimension_progress_screen_content"
+      },
+      {
+        "requires": "($pocket_screen)",
+        "$screen_content": "progress.world_convert_modal_progress_screen_content"
+      }
+    ]
+  },
+
+  "world_loading_progress_screen@progress.progress_screen": {
+    "variables": [
+      {
+        "requires": "($desktop_screen)",
+        "$screen_bg_content": "common_delxe.null_panel",
+        "$screen_content": "progress_deluxe.world_loading_progress_screen_content"
+      },
+      {
+        "requires": "($pocket_screen)",
+        "$screen_content": "progress.world_convert_modal_progress_screen_content"
+      }
+    ]
+  },
+
+  "overworld_loading_progress_screen@progress.progress_screen": {
+    "$screen_bg_content": "progress.overworld_loading_background",
+    "variables": [
+      {
+        "requires": "($desktop_screen)",
+        "$screen_content": "progress_deluxe.world_dimension_progress_screen_content"
+      },
+      {
+        "requires": "($pocket_screen)",
+        "$screen_content": "progress.world_convert_modal_progress_screen_content"
+      }
+    ]
+  },
+
+  "nether_loading_progress_screen@overworld_loading_progress_screen": {
+    "$screen_bg_content": "progress.nether_loading_background"
+  },
+
+  "theend_loading_progress_screen@overworld_loading_progress_screen": {
+    "$screen_bg_content": "progress.theend_loading_background"
+  },
+
+  "world_saving_progress_screen@progress.progress_screen": {
+    "variables": [
+      {
+        "requires": "($desktop_screen)",
+        "$screen_bg_content": "common_delxe.null_panel",
+        "$screen_content": "progress_deluxe.world_saving_progress_screen_content"
+      },
+      {
+        "requires": "($pocket_screen)",
+        "$screen_content": "progress.world_save_modal_progress_screen_content"
+      }
+    ]
+  },
+
+  "world_convert_modal_progress_screen@progress.progress_screen": {
+    "variables": [
+      {
+        "requires": "($desktop_screen)",
+        "$screen_bg_content": "common_delxe.null_panel",
+        "$screen_content": "progress_deluxe.world_loading_progress_screen_content"
+      },
+      {
+        "requires": "($pocket_screen)",
+        "$screen_content": "progress.world_convert_modal_progress_screen_content"
+      }
+    ]
+  }
+}

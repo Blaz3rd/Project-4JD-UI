@@ -1,0 +1,18 @@
+//File modified by @CrizArtEX.
+//(c) Don't use any code design without permission!
+{
+  "horse_screen@common.inventory_screen_common": {
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "horse_deluxe.horse_panel",
+        "$screen_bg_content": "common_deluxe.null_panel"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "horse_pocket.horse_panel",
+        "$close_on_player_hurt": true
+      }
+    ]
+  }
+}

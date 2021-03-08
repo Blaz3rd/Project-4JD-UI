@@ -1,0 +1,8 @@
+//File modified by @CrizArtEX.
+//(c) Don't use any code design without permission!
+{
+  "chat_screen@common.base_screen": {
+    "close_on_player_hurt": true,
+    "$screen_content": "chat_deluxe.chat_screen_content"
+  }
+}

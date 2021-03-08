@@ -1,0 +1,92 @@
+//File made by @CrizArtEX.
+//(c) Don't use any code design without permission!
+{
+  "namespace": "creative_new_deluxe",
+
+
+  "search_tab@crafting_deluxe.left_tab": {
+    "$is_right_most_tab": true,
+    "$tab_view_binding_name": "search_tab_toggle",
+    "$tab_icon": "common_console.icon_recipe_search",
+    "$toggle_group_forced_index": "$search_index",
+
+    "$toggle_binding_type": "global",
+    "$toggle_state_binding_name": "#is_left_tab_search"
+  },
+
+  "construction_tab@crafting_deluxe.left_tab": {
+    "$unchecked_control": "common_console.tab_left_back",
+    "$checked_control": "common_console.tab_left",
+    "$unchecked_hover_control": "common_console.tab_left_back",
+    "$checked_hover_control": "common_console.tab_left",
+
+    "$is_left_most_tab": true,
+    "$tab_view_binding_name": "construction_tab_toggle",
+    "$tab_icon": "common_console.icon_recipe_construction",
+    "$toggle_group_forced_index": "$construction_index",
+
+    "$toggle_binding_type": "global",
+    "$toggle_state_binding_name": "#is_left_tab_construct"
+  },
+
+  "equipment_tab@crafting_deluxe.left_tab": {
+    "$tab_view_binding_name": "equipment_tab_toggle",
+    "$tab_icon": "common_console.icon_recipe_equipment",
+    "$toggle_group_forced_index": "$equipment_index",
+
+    "$toggle_binding_type": "global",
+    "$toggle_state_binding_name": "#is_left_tab_equipment"
+  },
+
+  "nature_tab@crafting_deluxe.left_tab": {
+    "$tab_view_binding_name": "nature_tab_toggle",
+    "$tab_icon": "common_console.icon_recipe_nature",
+    "$toggle_group_forced_index": "$nature_index",
+
+    "$toggle_binding_type": "global",
+    "$toggle_state_binding_name": "#is_left_tab_nature"
+  },
+
+  "items_tab@crafting_deluxe.left_tab": {
+    "$tab_view_binding_name": "items_tab_toggle",
+    "$tab_icon": "common_console.icon_recipe_item",
+    "$toggle_group_forced_index": "$items_index",
+
+    "$toggle_binding_type": "global",
+    "$toggle_state_binding_name": "#is_left_tab_items"
+  },
+
+  "tab_navigation_panel_layout": {
+    "type": "panel",
+    "layer": 4,
+    "controls": [
+      {
+        "top_navigation_tabs": {
+          "type": "panel",
+          "size": [ "100%", 28 ],
+          "anchor_to": "top_left",
+          "anchor_from": "top_left",
+          "controls": [
+            {
+              "content": {
+                "type": "stack_panel",
+                "orientation": "horizontal",
+                "size": [ "100%", "100%" ],
+                "anchor_to": "top_left",
+                "anchor_from": "top_left",
+                "controls": [     
+                  { "construction_tab@creative_new_deluxe.construction_tab": { "size": [ 41.5, 46 ] } },
+                  { "equipment_tab@creative_new_deluxe.equipment_tab": { "size": [ 41.5, 46 ] } },
+                  { "items_tab@creative_new_deluxe.items_tab": { "size": [ 41.5, 46 ] } },
+                  { "nature_tab@creative_new_deluxe.nature_tab": { "size": [ 41.5, 46 ] } },
+                  { "fill_panel": { "type": "panel", "size": [ 41.5, 46 ] } },
+                  { "search_tab@creative_new_deluxe.search_tab": { "size": [ 41.5, 46 ] } },
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

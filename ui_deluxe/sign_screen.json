@@ -1,0 +1,114 @@
+//File made by @CrizArtEX.
+//(c) Don't use any code design without permission!
+{
+  "namespace": "sign_deluxe",
+
+  //Sign screen!!
+
+  "sign_edit_label": {
+    "type": "label",
+    "shadow": true,
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "offset": [ 0, "10%" ],
+    "color": "$sign_edit_text_color",
+    "text": "sign.edit"
+  },
+
+  "classic_done_button@common_deluxe.classic_main_button": {
+    "anchor_from": "bottom_middle",
+    "anchor_to": "bottom_middle",
+    "layer": 4,
+    "offset": [ 0, "-20%" ],
+    "$button_text": "gui.done",
+    "$close_button_to_button_id": "button.menu_exit",
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "$close_button_to_button_id",
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "$close_button_to_button_id",
+        "mapping_type": "focused"
+      }
+    ]
+  },
+
+  //
+
+  "sign_background": {
+    "type": "image",
+    "size": [ 94, 102 ],
+    "offset": [ 0, 26 ],
+    "texture": "textures/ui_console/sign"
+  },
+
+  "sign_text_multiline@common.multiline_text_edit_box": {
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [ 93, 46 ],
+    "offset": [ 0, "25%" ],
+    "$text_alignment": "center",
+    "constrain_to_rect": true,
+    "selected": true,
+    "can_be_deselected": false,
+    "focus_enabled": true,
+    "$text_box_name": "#sign_text_multi",
+    "$text_color_binding_type": "global",
+
+    "$text_background_default": "sign_deluxe.sign_background",
+    "$text_background_hover": "sign_deluxe.sign_background",
+
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.menu_exit",
+        "handle_select": false,
+        "handle_deselect": true,
+        "mapping_type": "global"
+      }
+    ]
+  },
+
+  "sign_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "sign_edit_label@sign_deluxe.sign_edit_label": { } },
+      { "text_edit@sign_deluxe.sign_text_multiline": { } },
+      { "classic_done_button@sign_deluxe.classic_done_button": { } },
+      {
+        "select_button@death_deluxe.a_button_panel": { }
+      },
+      {
+        "invisible_exit_background": {
+          "type": "input_panel",
+          "layer": 1,
+          "size": [ "100%", "100%" ],
+          "focus_enabled": true,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "bindings": [
+            {
+              "binding_name": "#close_button_visible",
+              "binding_name_override": "#visible"
+            }
+          ],
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.menu_exit",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.menu_exit",
+              "mapping_type": "pressed"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

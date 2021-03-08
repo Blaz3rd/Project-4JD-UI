@@ -1,0 +1,19 @@
+//File modified by @CrizArtEX.
+//(c) Don't use any code design without permission!
+{
+  "anvil_screen@common.inventory_screen_common": {
+    "$close_on_player_hurt|default": true,
+    "close_on_player_hurt": "$close_on_player_hurt",
+    "variables": [
+      {
+        "requires": "$desktop_screen",
+        "$screen_content": "anvil_deluxe.anvil_panel",
+        "$screen_bg_content": "common_deluxe.null_panel"
+      },
+      {
+        "requires": "$pocket_screen",
+        "$screen_content": "anvil_pocket.anvil_panel"
+      }
+    ]
+  }
+}

@@ -1,0 +1,118 @@
+//File made by @CrizArtEX.
+//(c) Don't use any code design without permission!
+{
+  "namespace": "disconnect_deluxe",
+
+  "menu_button_template@common_deluxe.classic_main_button": {
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle"
+  },
+
+  "continue_button@disconnect_deluxe.menu_button_template": {
+    "$pressed_button_name": "button.menu_continue",
+    "$button_text": "gui.continue"
+  },
+
+  "check_store_button@disconnect_deluxe.menu_button_template": {
+    "$pressed_button_name": "button.menu_check_store",
+    "$button_text": "gui.store",
+    "ignored": "$is_holographic"
+  },
+
+  "exit_button@disconnect_deluxe.menu_button_template": {
+    "$pressed_button_name": "button.menu_leave_screen",
+    "$button_text": "gui.back"
+  },
+
+  "ok_button@disconnect_deluxe.menu_button_template": {
+    "$pressed_button_name": "button.menu_leave_screen",
+    "$button_text": "gui.ok"
+  },
+
+  "button_panel": {
+    "type": "panel",
+    "offset": [ 0, 25 ],
+    "anchor_to": "bottom_middle",
+    "anchor_from": "bottom_middle",
+    "controls": [
+      { "ok_button@disconnect_deluxe.ok_button": {} }
+    ]
+  },
+
+  "realms_disconnect_button_panel@disconnect_deluxe.button_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "controls": [
+      { "check_store_button@disconnect_deluxe.check_store_button": {} },
+      {
+        "spacing_gap@disconnect.spacing_gap": {
+          "ignored": "$is_holographic"
+        }
+      },
+      { "exit_button@disconnect_deluxe.exit_button": {} }
+    ]
+  },
+
+  "realms_warning_button_panel@disconnect_deluxe.button_panel": {
+    "type": "stack_panel",
+    "orientation": "horizontal",
+    "controls": [
+      { "check_store_button@disconnect_deluxe.check_store_button": {} },
+      {
+        "spacing_gap@disconnect.spacing_gap": {
+          "ignored": "$is_holographic"
+        }
+      },
+      { "continue_button@disconnect_deluxe.continue_button": {} }
+    ]
+  },
+
+  "disconnect_screen_text@disconnect.disconnect_screen_text": {
+    "shadow": true
+  },
+
+  "disconnect_text@disconnect_deluxe.disconnect_screen_text": {
+    "text": "#disconnect_text",
+    "bindings": [
+      { "binding_name": "#disconnect_text" }
+    ]
+  },
+
+  "disconnect_title_text@disconnect_deluxe.disconnect_screen_text": {
+    "size": [ "default", 10 ],
+    "max_size": [ "100% - 20px", 10 ],
+    "color": "$main_menu_button_locked_color",
+    "anchor_to": "top_middle",
+    "anchor_from": "top_middle",
+    "offset": [ 0, -15 ],
+    "text": "#title_text",
+    "bindings": [
+      { "binding_name": "#title_text" }
+    ]
+  },
+
+  "title_panel": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "controls": [
+      {
+        "disconnect_text@disconnect_deluxe.disconnect_text": {
+          "controls": [
+            { "disconnect_title_text@disconnect_deluxe.disconnect_title_text": {} },
+            { "$button_layout": {} }
+          ]
+        }
+      }
+    ]
+  },
+
+  "disconnect_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "title_panel@disconnect_deluxe.title_panel": {} },
+      { "gamepad_helpers@progress_deluxe.gamepad_helpers": { } }
+    ]
+  }
+}

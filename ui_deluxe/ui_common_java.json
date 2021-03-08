@@ -1,0 +1,101 @@
+//File made by @CrizAtEX.
+//Only members of Legacy Gui Pack can use any code.
+{
+  "namespace": "common_java",
+
+  //Menu panel template!
+
+  "java_scroll_box": {
+    "type": "image",
+    "layer": 32,
+    "texture": "textures/ui_deluxe/java_scroll_box"
+  },
+
+  "java_scroll_track": {
+    "type": "image",
+    "texture": "textures/ui_deluxe/java_scroll_track"
+  },
+
+  "options_background@common.dirt_background": {
+    "texture": "textures/ui_deluxe/options_background",
+    "color": [ 0.25, 0.25, 0.25, 1.0 ],
+    "tiled_scale": "$options_bg_tiled_scale"
+  },
+
+  "portal_background@common.portal_background": {
+    "texture": "textures/ui_deluxe/portal_background",
+    "tiled_scale": "$portal_bg_tiled_scale"
+  },
+
+  "middle_bg": { 
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      { 
+        "bg_overlay": {
+          "type": "image",
+          "layer": 1,
+          "texture": "textures/ui_deluxe/java_middle_bg",
+          "size": [ "100%", "100%" ]
+        }
+      },
+      {
+        "bg@$bg": {
+          "layer": 0,
+          "color": [ 1.0, 1.0, 1.0, 1.0 ]
+        }
+      }
+    ]
+  },
+
+  "menu_panel_template": {
+    "type": "stack_panel",
+    "size": [ "100%", "100%" ],
+    "$top_content|default": "",
+    "$top_content_size|default": [ "100%", 32 ],
+    "$middle_content|default": "",
+    "$bottom_content|default": "",
+    "$bottom_content_size|default": [ "100%", 32 ],
+    "$bg|default": "common_java.options_background",
+    "controls": [
+      {
+        "top_panel": {
+          "type": "panel",
+          "size": "$top_content_size",
+          "controls": [
+            { "top_content@$top_content": { } },
+            { "bg@$bg": { } }
+          ]
+        }
+      },
+      {
+        "middle_panel": {
+          "type": "panel",
+          "size": [ "100%", "fill" ],
+          "controls": [
+            { 
+              "bg_overlay_border": {
+                "type": "image",
+                "layer": 32,
+                "texture": "textures/ui_deluxe/java_middle_bg_border",
+                "size": [ "100%", "100%" ]
+              }
+            },
+            { "middle_content@$middle_content": { "layer": 2 } },
+            { "bg@$bg": { "color": [ 0.125, 0.125, 0.125, 1.0 ] } }
+          ]
+        }
+      },
+      {
+        "bottom_panel": {
+          "type": "panel",
+          "size": "$bottom_content_size",
+          "controls": [
+            { "bottom_content@$bottom_content": { } },
+            { "bg@$bg": { } }
+          ]
+        }
+      }
+    ]
+  }
+}

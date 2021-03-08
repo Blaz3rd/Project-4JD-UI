@@ -1,0 +1,7 @@
+//File modified by @CrizArtEX.
+//(c) Don't use any code design without permission!
+{
+  "start_screen@common.base_screen": {
+    "$screen_content": "start_deluxe.start_screen_content"
+  }
+}

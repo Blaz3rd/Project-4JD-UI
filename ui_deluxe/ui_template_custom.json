@@ -1,0 +1,30 @@
+//File made by @CrizArtEX.
+//(c) Don't use any code design without permission!
+{
+  "namespace": "common_custom_deluxe",
+  
+  //Tab
+
+  "custom_tab": {
+    "layer": 2,
+    "type": "panel",
+    "$tab_content|default": "common_tabs.empty_tab_content",
+    "controls": [
+      { "$tab_view_binding_name@common.toggle": { } },
+      {
+        "tab_content_sizer": {
+          "type": "panel",
+          "$tab_content_size|default": [ "100% - 4px", "100% - 4px" ],
+          "size": "$tab_content_size",
+          "controls": [
+            {
+              "tab_content@$tab_content": {
+                "layer": 3
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

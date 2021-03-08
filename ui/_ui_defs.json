@@ -1,0 +1,43 @@
+//(c) CrizArtEX. Don't use any code design without permission!
+{
+  // Alphabetical order please (in each group) :)
+  "ui_defs": [
+    //  #region Modified assets files added by @CrizArtEX
+    //  Base.
+    "ui_deluxe/ui_deluxe_textures.json",
+    //  Main screens.
+    "ui_deluxe/chat_screen.json",
+    "ui_deluxe/death_screen.json",
+    "ui_deluxe/debug_screen.json",
+    "ui_deluxe/disconnect_screen.json",
+    "ui_deluxe/hud_screen.json",
+    "ui_deluxe/in_bed_screen.json",
+    "ui_deluxe/pause_screen.json",
+    "ui_deluxe/progress_screen.json",
+    "ui_deluxe/start_screen.json",
+    "ui_deluxe/sign_screen.json",
+    //  Inventory screens.
+    "ui_deluxe/anvil_screen.json",
+    "ui_deluxe/beacon_screen.json",
+    "ui_deluxe/brewing_stand_screen.json",
+    "ui_deluxe/chest_screen.json",
+    "ui_deluxe/creative_screen.json",
+    "ui_deluxe/creative_new_screen.json",
+    "ui_deluxe/enchanting_screen.json",
+    "ui_deluxe/furnace_screen.json",
+    "ui_deluxe/horse_screen.json",
+    "ui_deluxe/inventory_screen.json",
+    "ui_deluxe/inventory_screen_alt.json",
+    "ui_deluxe/recipe_book_screen.json",
+    "ui_deluxe/redstone_screen.json",
+    "ui_deluxe/trade_screen.json",
+    //  Global screens.
+    "ui_deluxe/settings_common.json",
+    "ui_deluxe/ui_art_assets_common.json",
+    "ui_deluxe/ui_common.json",
+    "ui_deluxe/ui_common_console.json",
+    "ui_deluxe/ui_common_java.json",
+    "ui_deluxe/ui_template_custom.json"
+    //  #endregion
+  ]
+}

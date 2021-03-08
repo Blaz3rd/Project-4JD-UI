@@ -1,0 +1,365 @@
+//File made by @CrizArtEX.
+//(c) Don't use any code design without permission!
+{
+  "namespace": "anvil_deluxe",
+
+  /////////////////////////////////////////////////////////////////////////////
+  //  Icon and text area (top quarter of screen).
+  /////////////////////////////////////////////////////////////////////////////
+
+  "title_label@anvil.generic_label": {
+    "offset": [ 0, 0 ],
+    "anchor_from": "top_left", // the parent
+    "anchor_to": "top_left" // this control
+  },
+
+  "icon_and_text_panel@anvil.icon_and_text_panel": {
+    "offset": [ 0, 0 ],
+    "controls": [
+      {
+        "anvil_icon@anvil.anvil_icon": {
+          "size": [ 37.5, 37.5 ],
+          "offset": [ 13.5, 9.5 ]
+        }
+      },
+      { "anvil_title_and_text_panel@anvil_deluxe.anvil_title_and_text_panel": { } }
+    ]
+  },
+
+  // panel for the text edit box
+  "text_edit_panel@anvil.text_edit_panel": {
+    "size": [ 120, 18 ],
+    "offset": [ 0, 0 ],
+    "controls": [
+      { "text_edit_control@anvil_deluxe.text_edit_control": { } }
+    ]
+  },
+
+  "title_panel": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100%", "20%" ],
+    "offset": [ 0, 0 ],
+    "controls": [
+      { 
+        "title_label@anvil.title_label": {
+          "offset": [ 0, 0 ],
+          "anchor_from": "top_left", // the parent
+          "anchor_to": "top_left" // this control
+        }
+      }
+    ]
+  },
+
+  // panel to position title label and text edit control
+  "anvil_title_and_text_panel@anvil.anvil_title_and_text_panel": {
+    "size": [ 120, 33.5 ],
+    "offset": [ 72.5, 10.5 ],
+    "controls": [
+      { "title_panel@anvil_deluxe.title_panel": { } },
+      { "text_edit_panel@anvil_deluxe.text_edit_panel": { } }
+    ]
+  },
+
+  "anvil_item_slot": {
+    "type": "panel",
+    "controls":[
+      {
+        "container_item@common_deluxe.container_item_27": {
+          "$highlight_slot_image": "common_deluxe.highlight_slot_output",
+          "$highlight_slot_border_image": "common_deluxe.highlight_border_slot_output",
+          "$highlight_size": [ 27, 27 ],
+          "$item_renderer_size": [ 27, 27 ],
+          "$item_renderer_offset": [ 5.5, 5.5 ],
+
+          "size": [ 30, 30 ],
+          "$cell_image_size": [ 30, 30 ],
+
+          "anchor_to": "center",
+          "anchor_from": "center"
+        }
+      }
+    ]
+  },
+
+  "anvil_text_edit_active_hover_panel": {
+    "type": "panel",
+    "size": [ 110, 16 ],
+    "layer": -1,
+    "controls": [
+      { "anvil_text_edit_active_java@anvil_java.anvil_text_edit_active_java": { "layer": 0 } },
+      { "anvil_text_edit_active_hover_java@anvil_java.anvil_text_edit_active_hover_java": { "layer": 1 } }
+    ]
+  },
+
+  "text_edit_control@common_deluxe.text_edit_box": {
+    "layer": 2,
+    "anchor_from": "top_left", // the parent
+    "anchor_to": "top_left", // this control
+    "$text_edit_box_label_offset": [ 1, 0 ],
+    "$text_background_default": "common_console.text_input_default",
+    "$text_background_hover": "common_console.text_input_hover",
+    "$text_background_locked": "common_console.text_input_locked",
+    "property_bag": {
+      "#property_field": "#item_name"
+    },
+    "max_length": 30,
+    "$text_edit_binding_name": "#text_box_item_name",
+    "$text_edit_box_label_size": [ "default", 10 ]
+  },
+
+  /////////////////////////////////////////////////////////////////////////////
+  //  Recipe (input, material and results) area (2nd quarter of screen).
+  /////////////////////////////////////////////////////////////////////////////
+
+  "cost_label@anvil.cost_label": {
+    "shadow": false,
+    "offset": [ 0, 1 ]
+  },
+
+  /////////////////////////////////////////////////////////////////////////////
+  // #region Separated recipe grid, for each anvil slot. By @CrizArtEX
+  /////////////////////////////////////////////////////////////////////////////
+
+  "recipe_grid_input": {
+    "type": "grid",
+    "size": [ 30, 30 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "grid_dimensions": [ 1, 1 ],
+    "controls": [
+      {
+        "input_item_slot@anvil_deluxe.anvil_item_slot": {
+          "grid_position": [ 0, 0 ],
+          "$item_collection_name": "anvil_input_items"
+        }
+      }
+    ]
+  },
+
+  "recipe_grid_material": {
+    "type": "grid",
+    "size": [ 18, 18 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "grid_dimensions": [ 1, 1 ],
+    "controls": [
+      {
+        "material_item_slot@anvil_deluxe.anvil_item_slot": {
+          "grid_position": [ 0, 0 ],
+          "$item_collection_name": "anvil_material_items"
+        }
+      }
+    ]
+  },
+
+  "recipe_grid_yields": {
+    "type": "grid",
+    "size": [ 36, 24 ],
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "grid_dimensions": [ 1, 1 ],
+    "controls": [
+      {
+        "yields": {
+          "type": "panel",
+          "grid_position": [ 0, 0 ],
+          "controls": [
+            { "arrow@common_console.arrow_off": { } },
+            {
+              "cross_out_icon_java@anvil.cross_out_icon": {
+                "layer": 1,
+                "offset": [ 9.5, 2 ],
+                "size": [ 22.5, 22.5 ],
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "bindings": [
+                  {
+                    "binding_name": "#cross_out_icon",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "recipe_grid_result": {
+    "type": "grid",
+    "size": [ 30, 30 ],
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "grid_dimensions": [ 1, 1 ],
+    "controls": [
+      {
+        "result_item_slot@anvil_deluxe.anvil_item_slot": {
+          "grid_position": [ 0, 0 ],
+          "$item_collection_name": "anvil_result_items"
+        }
+      }
+    ]
+  },
+
+  // #endregion
+
+  "sucess_text_shadow@anvil_deluxe.cost_label": {
+    "color": "$anvil_cost_success_text_shadow",
+    "bindings": [
+      {
+        "binding_name": "#cost_text",
+        "binding_name_override": "#text"
+      },
+      {
+        "binding_name": "#cost_text_green",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "fail_text_shadow@anvil_deluxe.cost_label": {
+    "color": "$anvil_cost_fail_text_shadow",
+    "bindings": [
+      {
+        "binding_name": "#cost_text",
+        "binding_name_override": "#text"
+      },
+      {
+        "binding_name": "#cost_text_red",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "recipe_panel": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ 142, 43.5 ],
+    "offset": [ 13.5, 55 ],
+    "controls": [
+      { "recipe_grid_input@anvil_deluxe.recipe_grid_input": { } },
+      {
+        "plus": {
+          "type": "panel",
+          "controls": [
+            {
+              "plus_sign_icon@anvil.plus_sign_icon": {
+                "anchor_from": "top_left",
+                "anchor_to": "top_left",
+                "size": [ 19.5, 19.5 ],
+                "offset": [ 39.5, 5 ]
+              }
+            }
+          ]
+        }
+      },
+      { "recipe_grid_material@anvil_deluxe.recipe_grid_material": { "offset": [ 75, 6 ] } },
+      { "recipe_grid_yields@anvil_deluxe.recipe_grid_yields": { "offset": [ 107, 3 ] } },
+      { "recipe_grid_result@anvil_deluxe.recipe_grid_result": { "offset": [ 40, 0 ] } },
+      {
+        "cost_panel": {
+          "type": "panel",
+          "offset": [ 42.5, 0 ],
+          "anchor_from": "bottom_right",
+          "anchor_to": "bottom_right",
+          "controls": [
+            {
+              "cost_label_0@anvil_deluxe.cost_label": {
+                "color": "$anvil_cost_fail_text_color",
+                "layer": 2,
+                "bindings": [
+                  {
+                    "binding_name": "#cost_text",
+                    "binding_name_override": "#text"
+                  },
+                  {
+                    "binding_name": "#cost_text_red",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            {
+              "cost_label_1@anvil_deluxe.cost_label": {
+                "color": "$anvil_cost_success_text_color",
+                "layer": 2,
+                "bindings": [
+                  {
+                    "binding_name": "#cost_text",
+                    "binding_name_override": "#text"
+                  },
+                  {
+                    "binding_name": "#cost_text_green",
+                    "binding_name_override": "#visible"
+                  }
+                ]
+              }
+            },
+            { "sucess_text_shadow_1@anvil_deluxe.sucess_text_shadow": { "offset": [ 1, 2 ] } },
+            { "sucess_text_shadow_2@anvil_deluxe.sucess_text_shadow": { "offset": [ 0, 2 ] } },
+            { "sucess_text_shadow_3@anvil_deluxe.sucess_text_shadow": { "offset": [ 1, 1 ] } },
+            { "fail_text_shadow_1@anvil_deluxe.fail_text_shadow": { "offset": [ 1, 2 ] } },
+            { "fail_text_shadow_2@anvil_deluxe.fail_text_shadow": { "offset": [ 0, 2 ] } },
+            { "fail_text_shadow_3@anvil_deluxe.fail_text_shadow": { "offset": [ 1, 2 ] } }
+          ]
+        }
+      }
+    ]
+  },
+
+  "top_half_panel": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ "100%", "50%" ],
+    "offset": [ 0, 0 ],
+    "controls": [
+      { "icon_and_text_panel@anvil_deluxe.icon_and_text_panel": { } },
+      { "recipe_panel@anvil_deluxe.recipe_panel": { } }
+    ]
+  },
+
+  /////////////////////////////////////////////////////////////////////////////
+  //  screen.
+  /////////////////////////////////////////////////////////////////////////////
+
+  "anvil_panel": {
+    "type": "panel",
+    "$is_container": true,
+    "controls": [
+      { "container_gamepad_helpers@common_deluxe.container_gamepad_helpers": {} },
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 8
+        }
+      },
+      {
+        "root_panel@common.root_panel": {
+          "layer": 1,
+          "size": [ 207, 215 ],
+          "controls": [
+            { "common_panel@common_deluxe.common_panel_container": { } },
+            {
+              "anvil_screen_inventory": {
+                "type": "panel",
+                "layer": 5,
+                "controls": [
+                  { "top_half_panel@anvil_deluxe.top_half_panel": { } },
+                  { "inventory_panel_bottom_half@common_deluxe.inventory_panel_bottom_half": { "offset": [ -4, 0 ] } },
+                  { "hotbar_grid@common_deluxe.hotbar_grid_template": { "offset": [ 9, -10 ] } },
+                  { "inventory_take_progress_icon_button@common.inventory_take_progress_icon_button": { } }
+                ]
+              }
+            },
+            { "inventory_selected_icon_button@common_deluxe.inventory_selected_icon_button": { } },
+            { "gamepad_cursor@common.gamepad_cursor_button": {} }
+          ]
+        }
+      }
+    ]
+  }
+}

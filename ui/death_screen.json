@@ -1,0 +1,14 @@
+//File modified by @CrizArtEX.
+//(c) Don't use any code design without permission!
+{
+  "namespace": "death",
+  
+  //---------------------------------------------------------------------------
+  // Modified assets for Death Screen!
+  //---------------------------------------------------------------------------
+
+  "death_screen@common.base_screen": {
+    "$screen_bg_content": "death.background_gradient",
+    "$screen_content": "death_deluxe.death_screen_content"
+  }
+}

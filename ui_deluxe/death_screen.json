@@ -1,0 +1,108 @@
+//File made by @CrizArtEX.
+//(c) Don't use any code design without permission!
+{
+  "namespace": "death_deluxe",
+
+  "a_button_panel": {
+    "type": "panel",
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "size": [ "100%c", 26 ],
+    "offset": [ 0, 0 ],
+    "controls": [
+      {
+        "gamepad_helper_a@common.gamepad_helper_a": {
+          "$icon_text_color": "$gamepad_button_generic_text_color",
+          "$icon_description_bind": "controller.buttonTip.select",
+          "$icon_description_bind_type": "none"
+        }
+      }
+    ]
+  },
+
+  "you_died_label": {
+    "type": "label",
+    "color": "$death_text_color",
+    "layer": 2,
+    "text": "deathScreen.message",
+    "shadow": false,
+    "font_size": "large"
+  },
+
+  "you_died_label_border@death_deluxe.you_died_label": {
+    "layer": 1,
+    "color": "$death_outline_text_color"
+  },
+
+  "you_died_panel": {
+    "type": "panel",
+    "anchor_from": "top_middle",
+    "anchor_to": "top_middle",
+    "size": [ 500, 20 ],
+    "offset": [ 0, "25%" ],
+    "controls": [
+      { "you_died_label@death_deluxe.you_died_label": { } },
+      //Border plz!!
+      { "border_left@death_deluxe.you_died_label_border": { "offset": [ -1, 0 ] } },
+      { "border_up@death_deluxe.you_died_label_border": { "offset": [ 0, -1 ] } },
+      { "border_down@death_deluxe.you_died_label_border": { "offset": [ 0, 1 ] } },
+      { "border_right@death_deluxe.you_died_label_border": { "offset": [ 1, 0 ] } },
+      { "border_left_up@death_deluxe.you_died_label_border": { "offset": [ -1, -1 ] } },
+      { "border_right_down@death_deluxe.you_died_label_border": { "offset": [ 1, 1 ] } },
+      { "border_left_down@death_deluxe.you_died_label_border": { "offset": [ -1, 1 ] } },
+      { "border_right_up@death_deluxe.you_died_label_border": { "offset": [ 1, -1 ] } }
+    ]
+  },
+  
+  "death_screen_content": {
+    "type": "panel",
+    "controls": [
+      { "you_died_label_panel@death_deluxe.you_died_panel": { } },
+      {
+        "respawn_button@common_deluxe.classic_main_button": {
+          "$button_text": "deathScreen.respawn",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [ 0, 12 ],
+          "$pressed_button_name": "button.respawn_button",
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.respawn_button",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.respawn_button",
+              "mapping_type": "pressed"
+            }
+          ]
+        }
+      },
+      {
+        "main_menu_button@common_deluxe.classic_main_button": {
+          "$button_text": "deathScreen.quit",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "offset": [ 0, 37 ],
+          "$pressed_button_name": "button.main_menu_button",
+          "button_mappings": [
+            {
+              "from_button_id": "button.menu_select",
+              "to_button_id": "button.main_menu_button",
+              "mapping_type": "pressed"
+            },
+            {
+              "from_button_id": "button.menu_ok",
+              "to_button_id": "button.main_menu_button",
+              "mapping_type": "pressed"
+            }
+          ]
+        }
+      },
+      {
+        "select_button@death_deluxe.a_button_panel": { }
+      }
+    ]
+  }
+}

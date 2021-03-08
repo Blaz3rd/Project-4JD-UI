@@ -1,0 +1,27 @@
+//File modified by @CrizArtEX.
+//(c) Don't use any code design without permission!
+{
+  "namespace": "bed",
+
+  //---------------------------------------------------------------------------
+  // Modified assets for Bed Screen!
+  //---------------------------------------------------------------------------
+
+  "in_bed_screen@common.base_screen": {
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_cancel",
+        "to_button_id": "button.wake_up_button",
+        "mapping_type": "global"
+      },
+      {
+        "from_button_id": "button.menu_exit",
+        "to_button_id": "button.wake_up_button",
+        "mapping_type": "global"
+      }
+    ],
+
+    "$screen_bg_content": "bed.background",
+    "$screen_content": "bed_deluxe.in_bed_screen_content"
+  }
+}

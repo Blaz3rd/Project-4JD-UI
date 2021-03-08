@@ -1,0 +1,241 @@
+//File made by @CrizArtEX.
+//(c) Don't use any code design without permission!
+{
+  "namespace": "horse_deluxe",
+
+  "llama_grid@common_deluxe.container_item": {
+    "$background_images": "horse_deluxe.llama_chest_cell_panel"
+  },
+
+  "llama_chest_cell_panel": {
+    "type": "panel",
+    "size": [ 18, 18 ],
+    "layer": 2,
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "controls": [
+      { "llama_chest_cell_image@horse_java.llama_chest_cell_image": { } }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#has_only_carpet_slot",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "equip_panel": {
+    "type": "panel",
+    "size": [ 21, 42 ],
+    "anchor_to": "top_left",
+    "anchor_from": "top_left",
+    "controls": [
+      { "equip_grid@horse_deluxe.equip_grid": { } },
+      {
+        "saddle@common_console.empty_horse_slot_saddle": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 0.5, 0.5 ],
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#has_saddle_slot",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "armor_0@common_console.empty_horse_slot_armor": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 0.5, 0.5 ],
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#has_only_armor_slot",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "carpet_0@common_console.empty_llama_slot_carpet": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 0.5, 0.5 ],
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#has_only_carpet_slot",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "armor_1@common_console.empty_horse_slot_armor": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 0.5, 21.5 ],
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#has_armor_and_saddle_slot",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      },
+      {
+        "carpet_1@common_console.empty_llama_slot_carpet": {
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [ 0.5, 21.5 ],
+          "layer": 4,
+          "bindings": [
+            {
+              "binding_name": "#has_carpet_and_saddle_slot",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "inv_panel": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ 105, 63 ],
+    "offset": [ 96.5, 20 ],
+    "controls": [
+      {
+        "recessed_panel@common_console.recessed_panel": {
+          "size": [ 105, 63 ],
+          "layer": 2
+        }
+      },
+      {
+        "inv_grid@horse_deluxe.inv_grid": {
+          "layer": 3
+        }
+      }
+    ]
+  },
+
+  "horse_renderer": {
+    "type": "panel",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "size": [ 63, 63 ],
+    "controls": [
+      {
+        "recessed_panel@common_console.recessed_panel": {
+          "size": [ 63, 63 ],
+          "layer": 3
+        }
+      },
+      {
+        "renderer_bg": {
+          "type": "image",
+          "texture": "textures/ui/Black",
+          "size": [ 60, 60 ],
+          "layer": 4
+        }
+      },
+      {
+        "horse_custom_panel": {
+          "type": "panel",
+          "size": [ "30%", "30%" ],
+          "offset": [ 0, "30%" ],
+
+          "controls": [
+            {
+              "horse_custom": {
+                "type": "custom",
+                "animation_reset_name": "screen_animation_reset",
+                "anims": [
+                  "@common.screen_exit_size_animation_push",
+                  "@common.screen_exit_size_animation_pop",
+                  "@common.screen_entrance_size_animation_push",
+                  "@common.screen_entrance_size_animation_pop"
+                ],
+                "renderer": "live_horse_renderer",
+                "layer": 5,
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "bindings": [
+                  {
+                    "binding_name": "#entity_id"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "horse_label@horse.horse_label": {
+    "offset": [ 14, 7.5 ]
+  },
+
+  "equip_grid@horse.equip_grid": {
+    "size": [ 21, 42 ],
+    "grid_item_template": "@common_deluxe.container_item"
+  },
+
+  "inv_grid@horse.inv_grid": {
+    "layer": 3,
+    "grid_item_template": "@common_deluxe.container_item"
+  },
+
+  /////////////////////////////////////////////////////////////////////////////
+  //  Screens.
+  /////////////////////////////////////////////////////////////////////////////
+
+  "horse_panel": {
+    "type": "panel",
+    "controls": [
+      { "container_gamepad_helpers@common_deluxe.container_gamepad_helpers": {} },
+      {
+        "flying_item_renderer@common.flying_item_renderer": {
+          "layer": 8
+        }
+      },
+      {
+        "root_panel@common.root_panel": {
+          "layer": 1,
+          "size": [ 215, 203 ],
+          "controls": [
+            {
+              "common_panel@common_deluxe.common_panel_container": {
+                "$use_compact_close_button": false,
+                "$is_container": true
+              }
+            },
+            { "horse_section_label@horse_deluxe.horse_label": { } },
+            { "inv_panel@horse_deluxe.inv_panel": { } },
+            {
+              "equipment@horse_deluxe.equip_panel": {
+                "offset": [ 12.5, 20 ]
+              }
+            },
+            {
+              "renderer@horse_deluxe.horse_renderer": {
+                "offset": [ 33.5, 20 ]
+              }
+            },
+            { "inventory_panel_bottom_half@common_deluxe.inventory_panel_bottom_half": { "offset": [ 0, 2 ] } },
+            { "hotbar_grid@common_deluxe.hotbar_grid_template": { "offset": [ 13, -8 ] } },
+            { "inventory_selected_icon_button@common_deluxe.inventory_selected_icon_button": { } },
+            { "gamepad_cursor@common.gamepad_cursor_button": {} }
+          ]
+        }
+      }
+    ]
+  }
+}

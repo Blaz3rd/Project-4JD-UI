@@ -1,0 +1,487 @@
+{
+  "namespace": "common_console",
+
+  /////////////////////////////////////////////////////////////////////////////
+  //  Misc.
+  /////////////////////////////////////////////////////////////////////////////
+
+  "anim_auto_save_arrow_move_down": {
+    "anim_type": "offset",
+    "easing": "linear",
+    "duration": 0.25,
+    "fps": 60,
+    "from": [ 0, 0 ],
+    "to": [ 0, 4.5 ],
+    "next": "@common_console.anim_auto_save_arrow_move_up"
+  },
+
+  "anim_auto_save_arrow_move_up": {
+    "anim_type": "offset",
+    "easing": "linear",
+    "duration": 0.25,
+    "fps": 60,
+    "from": [ 0, 4.5 ],
+    "to": [ 0, 0 ],
+    "next": "@common_console.anim_auto_save_arrow_move_down"
+  },
+
+  "auto_save_icon": {
+    "type": "panel",
+    "anchor_from": "top_right",
+    "anchor_to": "top_right",
+    "offset": [ -15, 15 ],
+    "size": [ 24, 40.5 ],
+    "controls": [
+      {
+        "auto_save_arrow": {
+          "type": "image",
+          "texture": "textures/ui_console/auto_save_arrow",
+          "layer": 2,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": "@common_console.anim_auto_save_arrow_move_down"
+        }
+      },
+      {
+        "auto_save_chest": {
+          "type": "image",
+          "texture": "textures/ui_console/auto_save_chest",
+          "layer": 1,
+          "anchor_from": "bottom_left",
+          "anchor_to": "bottom_left",
+          "offset": [ 0, 16.5 ]
+        }
+      },
+      {
+        "auto_save_chest_item": {
+          "type": "custom",
+          "ignored": true,
+          "renderer": "inventory_item_renderer",
+          "size": [ 24, 24 ],
+          "layer": 1,
+          "anchor_from": "bottom_middle",
+          "anchor_to": "bottom_middle",
+          "offset": [ 3, 16.5 ],
+          "property_bag": {
+            "#item_id_aux": 3538944
+          }
+        }
+      }
+    ],
+    "bindings": [
+      {
+        "binding_name": "#auto_save_animation_visible",
+        "binding_name_override": "#visible"
+      }
+    ]
+  },
+
+  "text_panel_image": {
+    "type": "image",
+    "texture": "textures/ui_console/text_panel"
+  },
+
+  "modern_loading_animation": {
+    "anim_type": "flip_book",
+    "initial_uv": [ 0, 0 ],
+    "frame_count": 8,
+    "frame_step": 16,
+    "fps": 8,
+    "reversible": false,
+    "easing": "linear",
+    "next": "@bar_forward"
+  },
+
+  "modern_loading_icon": {
+    "type": "image",
+    "layer": 32,
+    "texture": "textures/ui_console/modern_loading_icon",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": [ 0, 0 ],
+    "size": [ 64, 64 ],
+    "uv_size": [ 16, 16 ],
+    "uv": "@common_console.modern_loading_animation"
+  },
+
+  "panorama_animation": {
+    "anim_type": "flip_book",
+    "initial_uv": [ 0, 0 ],
+    "frame_count": 4230,
+    "frame_step": 1,
+    "fps": 15,
+    "reversible": true,
+    "easing": "linear",
+    "next": "@bar_forward"
+  },
+
+  "panorama_background": {
+    "type": "image",
+    "fill": true,
+    "texture": "textures/ui_console/panorama_background",
+    "uv_size": [ 1920, 1080 ],
+    "uv": "@common_console.panorama_animation",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "layer": -4,
+    "size": [ "100%", "100%" ]
+  },
+
+  "panorama_bg": {
+    "type": "screen",
+    "controls": [
+      { "panorama_background@common_console.panorama_background": { } }
+    ]
+  },
+
+  /////////////////////////////////////////////////////////////////////////////
+  //  Main.
+  /////////////////////////////////////////////////////////////////////////////
+
+  "text_input_default": {
+    "type": "image",
+    "texture": "textures/ui_console/text_input_default",
+    "size": [ "100% +2px", "100% +2px" ]
+  },
+
+  "text_input_hover": {
+    "type": "image",
+    "texture": "textures/ui_console/text_input_hover",
+    "size": [ "100% +2px", "100% +2px" ]
+  },
+
+  "text_input_locked": {
+    "type": "image",
+    "texture": "textures/ui_console/text_input_locked",
+    "size": [ "100% +2px", "100% +2px" ]
+  },
+
+  //  Tab
+  /////////////////////////////////////////////////////////////////////////////
+
+  "tab_left": {
+    "type": "image",
+    "texture": "textures/ui_console/tab_left",
+    "size": [ "100%", "100%" ]
+  },
+
+  "tab_middle": {
+    "type": "image",
+    "texture": "textures/ui_console/tab_middle",
+    "size": [ "100%", "100%" ]
+  },
+
+  "tab_right": {
+    "type": "image",
+    "texture": "textures/ui_console/tab_right",
+    "size": [ "100%", "100%" ]
+  },
+
+  "tab_left_back": {
+    "type": "image",
+    "texture": "textures/ui_console/tab_left_back",
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "size": [ "100%", "100% -4.5px" ]
+  },
+
+  "tab_middle_back": {
+    "type": "image",
+    "texture": "textures/ui_console/tab_middle_back",
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "size": [ "100%", "100% -4.5px" ]
+  },
+
+  "tab_right_back": {
+    "type": "image",
+    "texture": "textures/ui_console/tab_right_back",
+    "anchor_from": "bottom_left",
+    "anchor_to": "bottom_left",
+    "size": [ "100%", "100% -4.5px" ]
+  },
+
+  /////////////////////////////////////////////////////////////////////////////
+  //  Inventory.
+  /////////////////////////////////////////////////////////////////////////////
+
+  "warning_icon": {
+    "type": "image",
+    "texture": "textures/ui_console/warning_icon",
+    "size": [ 8, 8 ]
+  },
+
+  /////////////////////////////////////////////////////////////////////////////
+  //  Containers.
+  /////////////////////////////////////////////////////////////////////////////
+
+  "dialog_background_opaque": {
+    "type": "image",
+    "texture": "textures/ui_console/dialog_background_opaque"
+  },
+
+  "icon_holder": {
+    "type": "image",
+    "size": "$cell_image_size",
+    "texture": "textures/ui/cell_image"
+  },
+
+  "icon_holder_red": {
+    "type": "image",
+    "size": "$cell_image_size",
+    "texture": "textures/ui/cell_image_red"
+  },
+
+  "icon_holder_output": {
+    "type": "image",
+    "size": "$cell_image_size",
+    "texture": "textures/ui_console/icon_holder_output"
+  },
+
+  "icon_holder_output_red": {
+    "type": "image",
+    "size": "$cell_image_size",
+    "texture": "textures/ui_console/icon_holder_output_red"
+  },
+
+  "icon_holder_27": {
+    "type": "image",
+    "size": "$cell_image_size",
+    "texture": "textures/ui_console/icon_holder"
+  },
+
+  "recessed_panel": {
+    "type": "image",
+    "texture": "textures/ui_console/recessed_panel"
+  },
+
+  "round_recess_panel": {
+    "type": "image",
+    "size": [ "100% + 2px", "100% + 2px" ],
+    "texture": "textures/ui_console/round_recess_panel"
+  },
+
+  "scroll_track": {
+    "type": "image",
+    "size": [ "100% -2px", "100% -2px" ],
+    "texture": "textures/ui/cell_image"
+  },
+
+  "scroll_box": {
+    "type": "image",
+    "size": [ "100% +2px", "100% +2px" ],
+    "texture": "textures/ui/dialog_background_opaque"
+  },
+
+  //  Brewing Stand
+
+  "brewing_stand": {
+    "type": "image",
+    "size": [ 96, 96 ],
+    "texture": "textures/ui_console/brewing_stand"
+  },
+
+  "brewing_arrow_off": {
+    "type": "image",
+    "size": [ 13.5, 42 ],
+    "texture": "textures/ui_console/brewing_arrow_off"
+  },
+
+  "brewing_arrow_on": {
+    "type": "image",
+    "size": [ 13.5, 42 ],
+    "texture": "textures/ui_console/brewing_arrow_on"
+  },
+
+  "brewing_bubbles_off": {
+    "type": "image",
+    "size": [ 18, 42 ],
+    "texture": "textures/ui_console/brewing_bubbles_off"
+  },
+
+  "brewing_bubbles_on": {
+    "type": "image",
+    "size": [ 18, 42 ],
+    "texture": "textures/ui_console/brewing_bubbles_on"
+  },
+
+  "brewing_fuel_bar_empty": {
+    "type": "image",
+    "size": [ 30, 9 ],
+    "texture": "textures/ui_console/brewing_fuel_bar_empty"
+  },
+
+  "brewing_fuel_bar_full": {
+    "type": "image",
+    "size": [ 30, 9 ],
+    "texture": "textures/ui_console/brewing_fuel_bar_full"
+  },
+
+  "brewing_fuel_pipes": {
+    "type": "image",
+    "size": [ 21, 30 ],
+    "texture": "textures/ui_console/brewing_fuel_pipes"
+  },
+
+  "brewing_fuel_empty": {
+    "type": "image",
+    "size": [ 24, 24 ],
+    "texture": "textures/ui_console/brewing_fuel_empty"
+  },
+
+  //  Enchant
+
+  "enchant_slot": {
+    "type": "image",
+    "size": [ 19, 19 ],
+    "texture": "textures/ui_console/enchant_slot"
+  },
+
+  "lapis_icon": {
+    "type": "image",
+    "size": [ 14, 14 ],
+    "texture": "textures/ui_console/lapis_icon"
+  },
+
+  //  Furnace
+
+  "arrow_off": {
+    "type": "image",
+    "size": [ 36, 24 ],
+    "texture": "textures/ui_console/arrow_off"
+  },
+
+  "arrow_on": {
+    "type": "image",
+    "size": [ 36, 24 ],
+    "texture": "textures/ui_console/arrow_on"
+  },
+
+  "flame_off": {
+    "type": "image",
+    "size": [ 24, 24 ],
+    "texture": "textures/ui_console/flame_off"
+  },
+
+  "flame_on": {
+    "type": "image",
+    "size": [ 24, 24 ],
+    "texture": "textures/ui_console/flame_on"
+  },
+
+  //  Horse
+
+  "empty_horse_slot_saddle": {
+    "type": "image",
+    "size": [ 20, 20 ],
+    "texture": "textures/ui_console/empty_horse_slot_saddle"
+  },
+
+  "empty_horse_slot_armor": {
+    "type": "image",
+    "size": [ 20, 20 ],
+    "texture": "textures/ui_console/empty_horse_slot_armor"
+  },
+
+  "empty_llama_slot_carpet": {
+    "type": "image",
+    "size": [ 20, 20 ],
+    "texture": "textures/ui_console/empty_llama_slot_carpet"
+  },
+
+  //  Inventory
+
+  "arrow_small_off": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "texture": "textures/ui_console/arrow_small_off"
+  },
+
+  "empty_armor_slot_helmet": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "texture": "textures/ui_console/empty_armor_slot_helmet"
+  },
+
+  "empty_armor_slot_chestplate": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "texture": "textures/ui_console/empty_armor_slot_chestplate"
+  },
+
+  "empty_armor_slot_leggings": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "texture": "textures/ui_console/empty_armor_slot_leggings"
+  },
+
+  "empty_armor_slot_boots": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "texture": "textures/ui_console/empty_armor_slot_boots"
+  },
+
+  "empty_armor_slot_shield": {
+    "type": "image",
+    "size": [ 16, 16 ],
+    "texture": "textures/ui_console/empty_armor_slot_shield"
+  },
+
+  "icon_recipe_construction": {
+    "type": "image",
+    "size": [ 24, 24 ],
+    "texture": "textures/ui_console/icon_recipe_construction"
+  },
+
+  "icon_recipe_equipment": {
+    "type": "image",
+    "size": [ 24, 24 ],
+    "texture": "textures/ui_console/icon_recipe_equipment"
+  },
+
+  "icon_recipe_item": {
+    "type": "image",
+    "size": [ 24, 24 ],
+    "texture": "textures/ui_console/icon_recipe_item"
+  },
+
+  "icon_recipe_nature": {
+    "type": "image",
+    "size": [ 24, 24 ],
+    "texture": "textures/ui_console/icon_recipe_nature"
+  },
+
+  "icon_recipe_search": {
+    "type": "image",
+    "size": [ 24, 24 ],
+    "texture": "textures/ui_console/icon_recipe_search"
+  },
+
+  //  Trade
+
+  "chevron_left_default": {
+    "type": "image",
+    "size": [ 18, 28.5 ],
+    "texture": "textures/ui_console/chevron_left_default"
+  },
+
+  "chevron_left_hover@common_console.chevron_left_default": {
+    "texture": "textures/ui_console/chevron_left_hover"
+  },
+
+  "chevron_left_locked@common_console.chevron_left_default": {
+    "texture": "textures/ui_console/chevron_left_locked"
+  },
+
+  "chevron_right_default@common_console.chevron_left_default": {
+    "texture": "textures/ui_console/chevron_right_default"
+  },
+
+  "chevron_right_hover@common_console.chevron_left_default": {
+    "texture": "textures/ui_console/chevron_right_hover"
+  },
+
+  "chevron_right_locked@common_console.chevron_left_default": {
+    "texture": "textures/ui_console/chevron_right_locked"
+  }
+}
