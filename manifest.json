@@ -1,18 +1,18 @@
 {
-   "format_version" : 1,
-   "header" : {
-      "description" : "UI design ported by @CrizArtEX. Original UI design is from 4J Studios. Special thanks: agentms_ and HawfHuman.",
-      "name" : "Vanilla Deluxe: Project 4JD UI v0.1.1",
-      "uuid" : "66c6e9a8-3093-462a-9c36-dbb052165822",
-      "version" : [ 3, 5, 2 ],
-      "min_engine_version": [ 1, 2, 11 ]
-   },
-   "modules" : [
-      {
-         "description" : "UI design ported by @CrisXolt & @RealBlazerd. Original UI design is from 4J Studios. Special thanks: agentms_ and HawfHuman.",
-         "type" : "resources",
-         "uuid" : "743f6949-53be-44b6-b326-398005028819",
-         "version" : [ 0, 1, 1 ]
-      }
-   ]
+    "format_version": 2,
+    "header": {
+        "description": "UI design ported by @CrisXolt & @RealBlazerd. Original UI design is from 4J Studios. Special thanks: agentms_ and HawfHuman.",
+        "name": "Vanilla Deluxe: Project 4JD UI v0.1.1",
+        "uuid": "66c6e9a8-3093-462a-9c36-dbb052165822",
+        "version": [0, 0, 1],
+        "min_engine_version": [ 1, 16, 200 ]
+    },
+    "modules": [
+        {
+            "description": "UI design ported by @CrisXolt & @RealBlazerd. Original UI design is from 4J Studios. Special thanks: agentms_ and HawfHuman.",
+            "type": "resources",
+            "uuid": "743f6949-53be-44b6-b326-398005028819",
+            "version": [0, 1, 1]
+        }
+    ]
 }
