@@ -16,5 +16,12 @@ New stuff has been added to the Console UI just to make it look more like the re
 well, unfortunately old versions no more than `1.16.200` will not work and will bug a lot. (please do not make any issues of these saying it
 would not work on the older versions)
 
-**New Feaures added**
+**New Feaures added/Fixed**
 - Added a white transparent screen (makes it looks like console)
+- Replaced the original Minecraft title to "Minecraft Console Edition"
+- New background displaying on the Menu Starup
+- Skin issue now fixed by 1.16.200
+- Inventory items bug now in place
+- All Inventories (e.g. Furnace & chest) now displaying on new stuff for Blast Furnace and other new blocks
+
+
