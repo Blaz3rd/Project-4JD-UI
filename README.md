@@ -25,3 +25,8 @@ would not work on the older versions)
 - All Inventories (e.g. Furnace & chest) now displaying on new stuff for Blast Furnace and other new blocks
 
 
+Before (v0.1.0)
+![Image from game](https://cdn.discordapp.com/attachments/796127648165527602/818933194102669352/unknown.png)</br>
+
+After (v0.1.1)
+![Image from game](https://cdn.discordapp.com/attachments/796127648165527602/818932859837874236/unknown.png)</br>
