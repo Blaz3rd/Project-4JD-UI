@@ -1,4 +1,4 @@
-//File modified by @CrizArtEX. Don´t steal the code design ;)
+//File modified by @CrisXolt & @RealBlazerd. Don´t steal the code design ;)
 {
   "namespace": "progress",
 
@@ -481,7 +481,7 @@
 
   "tip_label": {
     "type": "label",
-    "text": "Note: UI is modified by CrizArtEX, making a more console feeling UI!!",
+    "text": "Note: UI design ported by CrisXolt & Blazerd. Original UI design is from 4J Studios. Special thanks: agentms_ and HawfHuman.",
     "layer": 2,
     "offset": [ 0, 8 ],
     "anchor_to": "top_middle",
