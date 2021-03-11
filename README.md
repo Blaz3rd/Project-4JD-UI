@@ -21,7 +21,7 @@ would not work on the older versions)
 - Replaced the original Minecraft title to "Minecraft Console Edition"
 - New background displaying on the Menu Starup
 - Skin issue now fixed by 1.16.200
-- Inventory items bug now in place
+- Loading screen displaying while entering on worlds, realms or Servers
 - All Inventories (e.g. Furnace & chest) now displaying on new stuff for Blast Furnace and other new blocks
 
 
